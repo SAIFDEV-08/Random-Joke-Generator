@@ -1,5 +1,7 @@
 const content = document.getElementById("content")
 const gen_btn = document.getElementById("gen-btn");
+const menu= document.getElementById("menu");
+const links=document.querySelector(".links")
 content.innerHTML = "Loading joke...";
 async function getJoke(){
     try{
@@ -21,3 +23,6 @@ async function getJoke(){
 
     }
 }
+menu.addEventListener("click",()=>{
+    links.classList.toggle("active")
+})
