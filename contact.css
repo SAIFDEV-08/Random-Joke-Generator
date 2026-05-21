@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: linear-gradient(90deg,#333,#002147);
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+    height: 2.5rem;
+    background-color: #333;
+    font-size: large;
+}
+nav a{
+    text-decoration: none;
+    color: #f1f1f1;
+    transition: all 0.5s ease;
+}
+nav a:hover{
+    opacity: 10%;
+    text-decoration: underline;
+}
+nav a:active{
+    scale: 0.5;
+}
+.links{
+    display: flex;
+    gap: 1.5rem;
+}
+#menu{
+    display: none;
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header h1{
+    color: #f1f1f1;
+    padding: 1rem;
+}
+.items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f1f1f1;
+    gap: 20px;
+    padding: 1.5rem;
+    width: 90%;
+    border-radius: 1rem;
+    max-width: 400px;
+    min-height: 350px;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.items label{
+    width: 200px;
+}
+.items input, .items textarea{
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+#btn{
+    padding: 0.7rem 2rem;
+    background-color: indigo;
+    border-radius: 0.5rem;
+    color: #f1f1f1;
+    border: none;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+#btn:hover{
+    opacity: 85%;
+}
+#btn:active{
+    scale: 0.5;
+}
+footer{
+    display: flex;
+    background-color: #333;
+    height: 2rem;
+    color: #f1f1f1;
+    justify-content: center;
+    align-items: center;
+    font-weight: normal;
+}
+@media (max-width:600px){
+    .links{
+        display: none;
+        flex-direction: column;
+    }
+    .links.active{
+        display: flex;
+        background-color: #333;
+        align-items: center;
+        padding: 0.5rem;
+        top: 2rem;
+        width: 100%;
+        position: absolute;
+        right: 0;
+    }
+    #menu{
+        display: block;
+    }
+    footer{
+        font-size: 12px;
+    }
+}
